@@ -1,0 +1,140 @@
+import java.util.*;
+public class MyClass1 {
+  public static void main(String[] args) {
+    Scanner obj = new Scanner(System.in);
+
+    int s = 0 ;
+    int s2 = 0;
+    int entr1 = 0 ;
+    int cpf = 0;
+    double cp1 = 0.0 ;
+    double cp2 = 0.0 ;
+
+    System.out.println("Enter your choice : Batting or Bowling");
+    String choice = obj.nextLine();
+
+    System.out.println("NOTE:-Runs can be between 1 and 9 only");
+
+    if(choice.equalsIgnoreCase("Batting")){
+
+  
+      System.out.println("Start entering your runs");
+      for(int i = 0 ; i>=0 ; i++ )
+      {
+         entr1 = obj.nextInt();
+         if(entr1<=9&&entr1>=1){
+         cp1 = Math.random();
+         cp2 = cp1*10;
+         cpf = (int) cp2;
+        System.out.println(entr1 + "   "  +  cpf);
+        if(entr1 == cpf)
+        {
+          System.out.println("Your total runs = " +s);
+          break;
+        }
+        else
+        {
+         s = s + entr1;
+         continue;
+        }
+        
+      }
+      else{
+        System.out.println("Runs can be between 1 and 9 only");
+        break;
+      }
+    }
+
+    System.out.println("Now it's your bowling");
+    
+    System.out.println("Start entering your runs for bowling");
+    for(int j = 0 ; j>=0 ; j++ )
+    {
+       entr1 = obj.nextInt();
+       if(entr1<=9&&entr1>=1){
+       cp1 = Math.random();
+       cp2 = cp1*10;
+       cpf = (int) cp2;
+      System.out.println(entr1 + "   "  +  cpf);
+      if(entr1 == cpf)
+      {
+        System.out.println("Computer's total runs = " +s2);
+        break;
+      }
+      else
+      {
+       s2 = s2 + entr1;
+       continue;
+      }
+      
+    }
+    else{
+      System.out.println("Runs can be between 1 and 9 only");
+      break;
+    }
+  }
+
+     }
+     else{
+      System.out.println("Start entering your runs for bowling");
+      for(int i = 0 ; i>=0 ; i++ )
+      {
+         entr1 = obj.nextInt();
+         if(entr1<=9&&entr1>=1){
+         cp1 = Math.random();
+         cp2 = cp1*10;
+         cpf = (int) cp2;
+        System.out.println(entr1 + "   "  +  cpf);
+        if(entr1 == cpf)
+        {
+          System.out.println("Computer's total runs = " +s2);
+          break;
+        }
+        else
+        {
+         s2 = s2 + entr1;
+         continue;
+        }
+        
+      }
+      else{
+        System.out.println("Runs can be between 1 and 9 only");
+        break;
+      }
+    }
+    System.out.println("Now it's your batting");
+    System.out.println("Start entering your runs");
+      for(int j = 0 ; j>=0 ; j++ )
+      {
+         entr1 = obj.nextInt();
+         if(entr1<=9&&entr1>=1){
+         cp1 = Math.random();
+         cp2 = cp1*10;
+         cpf = (int) cp2;
+        System.out.println(entr1 + "   "  +  cpf);
+        if(entr1 == cpf)
+        {
+          System.out.println("Your total runs = " +s);
+          break;
+        }
+        else
+        {
+         s = s + entr1;
+         continue;
+        }
+        
+      }
+      else{
+        System.out.println("Runs can be between 1 and 9 only");
+        break;
+      }
+    }
+
+     }
+     if(s>s2)
+     System.out.println("You have won the match");
+     else
+     System.out.println("You lost!!!");
+}
+}
+
